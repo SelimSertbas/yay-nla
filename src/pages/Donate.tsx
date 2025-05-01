@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,19 +30,16 @@ const Donate = () => {
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <Landmark size={40} className="text-bor-green mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-bor-green-dark">{t('bank_transfer')}</h3>
-                <div className="space-y-3 mb-4">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">{t('bank')}:</span> X Bank
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">{t('account_holder')}:</span> Yenişehir Bor Vakfı
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">{t('iban')}:</span> TR12 3456 7890 1234 5678 9012 34
-                  </p>
-                </div>
-                <div className="text-xs bg-bor-green/10 px-3 py-2 rounded-md text-bor-green-dark">
-                  {t('donation_description')}
+                <p className="text-sm text-gray-600 mb-4">
+                  Şimdilik aktif değil
+                </p>
+                <div className="flex flex-col space-y-3">
+                  <Link to="/contact" className="w-full bg-bor-green text-white px-4 py-3 rounded-md font-medium hover:bg-bor-green-dark transition-all duration-300 text-center">
+                    {t('contact_us_button')}
+                  </Link>
+                  <span className="text-xs text-center text-gray-500">
+                    {t('secure_payment')}
+                  </span>
                 </div>
               </div>
               
@@ -51,11 +47,11 @@ const Donate = () => {
                 <LinkIcon size={40} className="text-bor-green mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-bor-green-dark">Link ile Bağış</h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Buradan link ile bağış yapabilirsiniz
+                  Şimdilik aktif değil
                 </p>
                 <div className="flex flex-col space-y-3">
-                  <Link to="#" className="w-full bg-bor-green text-white px-4 py-3 rounded-md font-medium hover:bg-bor-green-dark transition-all duration-300 text-center">
-                    {t('donate_button')}
+                  <Link to="/contact" className="w-full bg-bor-green text-white px-4 py-3 rounded-md font-medium hover:bg-bor-green-dark transition-all duration-300 text-center">
+                    {t('contact_us_button')}
                   </Link>
                   <span className="text-xs text-center text-gray-500">
                     {t('secure_payment')}

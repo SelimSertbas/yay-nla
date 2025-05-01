@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -31,14 +32,25 @@ const Index = () => {
     setIsLoading(true);
 
     try {
-      // Simulate sending email
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Başarılı!",
-        description: "Mesajınız başarıyla gönderildi.",
-      });
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const result = await emailjs.send(
+        'service_56d2h8b', // EmailJS service ID
+        'template_4gydd8e', // EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'YQ2O7SR0cxtW8ac-t' // EmailJS public key
+      );
+
+      if (result.status === 200) {
+        toast({
+          title: "Başarılı!",
+          description: "Mesajınız başarıyla gönderildi.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }
     } catch (error) {
       console.error('Email sending failed:', error);
       toast({
@@ -392,16 +404,16 @@ const Index = () => {
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg hover:bg-white/30 transition-all duration-300 animate-fade-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
                 <Landmark size={40} className="mx-auto mb-4 text-white" />
                 <h3 className="text-xl font-bold mb-2">{t('bank_transfer')}</h3>
-                <p className="text-sm text-white/80 mb-4">TR12 3456 7890 1234 5678 9012 34</p>
+                <p className="text-sm text-white/80 mb-4">Şimdilik aktif değil</p>
                 <span className="inline-block text-xs bg-white/30 px-3 py-1 rounded-full">Yenişehir Bor Vakfı</span>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-lg hover:bg-white/30 transition-all duration-300 animate-fade-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
                 <Heart size={40} className="mx-auto mb-4 text-white" />
                 <h3 className="text-xl font-bold mb-2">Link ile Bağış</h3>
-                <p className="text-sm text-white/80 mb-4">Buradan link ile bağış yapabilirsiniz</p>
-                <Link to="/donate" className="inline-block bg-white text-bor-green-dark px-4 py-2 rounded-md font-medium hover:bg-bor-gold hover:text-white transition-all duration-300">
-                  {t('donate_button')}
+                <p className="text-sm text-white/80 mb-4">Şimdilik aktif değil</p>
+                <Link to="/contact" className="inline-block bg-white text-bor-green-dark px-4 py-2 rounded-md font-medium hover:bg-bor-gold hover:text-white transition-all duration-300">
+                  {t('contact_us_button')}
                 </Link>
               </div>
               
@@ -446,7 +458,7 @@ const Index = () => {
                       </div>
                       <div>
                         <h4 className="font-medium mb-1 text-bor-green-dark">{t('phone_number')}</h4>
-                        <p className="text-gray-600">+90 (532) 123 45 67</p>
+                        <p className="text-gray-600">...</p>
                       </div>
                     </div>
                     
@@ -546,19 +558,6 @@ const Index = () => {
                   </button>
                 </form>
 
-                <div className="w-full h-[300px] rounded-lg overflow-hidden">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3940.212442996433!2d34.58200837583756!3d36.78396217225169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1str!2str!4v1745946301251!5m2!1str!2str" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Vakıf Konum"
-                    className="w-full h-full rounded-lg"
-                  />
-                </div>
               </div>
             </div>
           </div>
