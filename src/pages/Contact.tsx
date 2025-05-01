@@ -206,7 +206,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-4 text-bor-gold2-dark">{t('location')}</h3>
                 <div className="w-full h-80 rounded-lg overflow-hidden">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.1234567890123!2d34.58200837583756!3d36.78396217225169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527a3d2c3c3c3c3%3A0x3c3c3c3c3c3c3c3c!2sYeni%C5%9Fehir%2C%20Mersin!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3940.212442996433!2d34.58200837583756!3d36.78396217225169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ3JzAyLjMiTiAzNMKwMzUnMDQuNSJF!5e1!3m2!1str!2str!4v1746116330702!5m2!1str!2str" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
