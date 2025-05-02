@@ -29,10 +29,16 @@ const AboutUs = () => {
               <div className="w-full md:w-1/2 animate-fade-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
                 <h2 className="text-3xl font-bold mb-6 text-bor-green-dark">{t('about_foundation')}</h2>
                 <p className="text-gray-700 mb-6">
-                  {t('about_foundation_p1')}
+                  Vakfımız, hayata dezavantajlı başlayan insanlara ve bozulan doğa dengesine duyduğumuz sorumlulukla kurulmuştur. Kendi imkânlarımız ve gönüllü destekçilerimizle yola çıktık.
                 </p>
                 <p className="text-gray-700 mb-6">
-                  {t('about_foundation_p2')}
+                  Bilim insanları ve iş dünyasıyla birlikte, özellikle çiftçilerimize destek olmak için projeler geliştirdik. En önemli çalışmamız, bor madeninden ürettiğimiz ve gübre-ilaç ihtiyacını ortadan kaldıran BORON adlı ürünümüzdür.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  Ayrıca yardıma muhtaç öğrenciler, sağlık hizmetine erişemeyen vatandaşlar ve deprem mağdurlarına destek veriyoruz. İhtiyaç sahiplerini, mahalle ve okullarda görevli temsilcilerimiz belirlemektedir.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  Doğa projelerimizle çorak alanları ağaçlandırıyor, canlılar için su ve yaşam alanları oluşturuyoruz. Amacımız; insanlara umut, doğaya hayat olmaktır.
                 </p>
                 {/* Stats section removed as requested */}
               </div>

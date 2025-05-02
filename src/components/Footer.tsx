@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -31,9 +31,12 @@ const Footer: React.FC = () => {
               <Link to="#" className="hover:text-bor-gold2-light transition-colors">
                 <Twitter size={20} />
               </Link>
-              <Link to="#" className="hover:text-bor-gold2-light transition-colors">
+              <a href="https://www.linkedin.com/company/borvakf%C4%B1/" target="_blank" rel="noopener noreferrer" className="hover:text-bor-gold2-light transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://www.instagram.com/yenisehirborvakfi?igsh=ZGVseHRzMHo3a2U3" target="_blank" rel="noopener noreferrer" className="hover:text-bor-gold2-light transition-colors">
                 <Instagram size={20} />
-              </Link>
+              </a>
             </div>
           </div>
 

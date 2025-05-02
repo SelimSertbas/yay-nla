@@ -9,7 +9,7 @@ import {
   Leaf, Book, Users, ArrowRight, TreeDeciduous, 
   Droplets, Bird, Sprout, Newspaper, Info, 
   Heart, MessageCircle, Landmark, Target,
-  Phone, MapPin, Facebook, Twitter, Instagram
+  Phone, MapPin, Facebook, Twitter, Instagram, Linkedin
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
@@ -147,10 +147,16 @@ const Index = () => {
               <div className="w-full md:w-1/2 animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0 }}>
                 <h2 className="section-title mb-6">{t('about')}</h2>
                 <p className="text-gray-700 mb-6">
-                  {t('about_foundation_p1')}
+                  Vakfımız, hayata dezavantajlı başlayan insanlara ve bozulan doğa dengesine duyduğumuz sorumlulukla kurulmuştur. Kendi imkânlarımız ve gönüllü destekçilerimizle yola çıktık.
                 </p>
                 <p className="text-gray-700 mb-6">
-                  {t('about_foundation_p2')}
+                  Bilim insanları ve iş dünyasıyla birlikte, özellikle çiftçilerimize destek olmak için projeler geliştirdik. En önemli çalışmamız, bor madeninden ürettiğimiz ve gübre-ilaç ihtiyacını ortadan kaldıran BORON adlı ürünümüzdür.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  Ayrıca yardıma muhtaç öğrenciler, sağlık hizmetine erişemeyen vatandaşlar ve deprem mağdurlarına destek veriyoruz. İhtiyaç sahiplerini, mahalle ve okullarda görevli temsilcilerimiz belirlemektedir.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  Doğa projelerimizle çorak alanları ağaçlandırıyor, canlılar için su ve yaşam alanları oluşturuyoruz. Amacımız; insanlara umut, doğaya hayat olmaktır.
                 </p>
                 {/* Stats section removed as requested */}
               </div>
@@ -475,13 +481,10 @@ const Index = () => {
                     <div className="pt-4 border-t border-bor-green/20">
                       <h4 className="font-medium mb-3 text-bor-green-dark">{t('follow_us')}</h4>
                       <div className="flex space-x-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-green/10 flex items-center justify-center hover:bg-bor-green hover:text-white transition-all duration-300">
-                          <Facebook size={18} />
+                        <a href="https://www.linkedin.com/company/borvakf%C4%B1/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-bor-green/10 flex items-center justify-center hover:bg-bor-green hover:text-white transition-all duration-300">
+                          <Linkedin size={18} />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-green/10 flex items-center justify-center hover:bg-bor-green hover:text-white transition-all duration-300">
-                          <Twitter size={18} />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-green/10 flex items-center justify-center hover:bg-bor-green hover:text-white transition-all duration-300">
+                        <a href="https://www.instagram.com/yenisehirborvakfi?igsh=ZGVseHRzMHo3a2U3" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-bor-green/10 flex items-center justify-center hover:bg-bor-green hover:text-white transition-all duration-300">
                           <Instagram size={18} />
                         </a>
                       </div>

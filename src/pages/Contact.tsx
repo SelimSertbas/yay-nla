@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackgroundAnimation from "@/components/BackgroundAnimation";
-import { Phone, MapPin, Mail, Facebook, Twitter, Instagram, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Mail, Instagram, MessageCircle, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/components/ui/use-toast";
@@ -115,13 +115,10 @@ const Contact = () => {
                     <div className="pt-4 border-t border-bor-gold2/20">
                       <h4 className="font-medium mb-3 text-bor-gold2-dark">{t('follow_us')}</h4>
                       <div className="flex space-x-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-gold2/10 flex items-center justify-center hover:bg-bor-gold2 hover:text-white transition-all duration-300">
-                          <Facebook size={18} />
+                        <a href="https://www.linkedin.com/company/borvakf%C4%B1/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-bor-gold2/10 flex items-center justify-center hover:bg-bor-gold2 hover:text-white transition-all duration-300">
+                          <Linkedin size={18} />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-gold2/10 flex items-center justify-center hover:bg-bor-gold2 hover:text-white transition-all duration-300">
-                          <Twitter size={18} />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-bor-gold2/10 flex items-center justify-center hover:bg-bor-gold2 hover:text-white transition-all duration-300">
+                        <a href="https://www.instagram.com/yenisehirborvakfi?igsh=ZGVseHRzMHo3a2U3" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-bor-gold2/10 flex items-center justify-center hover:bg-bor-gold2 hover:text-white transition-all duration-300">
                           <Instagram size={18} />
                         </a>
                       </div>
