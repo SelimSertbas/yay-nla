@@ -30,13 +30,28 @@ const Donate = () => {
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <Landmark size={40} className="text-bor-green mb-4" />
                 <h3 className="text-xl font-bold mb-2 text-bor-green-dark">{t('bank_transfer')}</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Şimdilik aktif değil
-                </p>
+                <div className="text-sm text-gray-600 mb-4 space-y-4">
+                  <div>
+                    <p className="font-semibold">Yenişehir Vakıf Zıraat</p>
+                    <p>Hesap adı: Yenişehir Bor Ürünleri Vakfı</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">TL Hesabı</p>
+                    <p>Hesap No: 1402-97535830-5001</p>
+                    <p>IBAN: TR290001001402975358305001</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">USD Hesabı</p>
+                    <p>Hesap No: 1402-97535830-5003</p>
+                    <p>IBAN: TR720001001402975358305003</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">EUR Hesabı</p>
+                    <p>Hesap No: 1402-97535830-5004</p>
+                    <p>IBAN: TR450001001402975358305004</p>
+                  </div>
+                </div>
                 <div className="flex flex-col space-y-3">
-                  <Link to="/contact" className="w-full bg-bor-green text-white px-4 py-3 rounded-md font-medium hover:bg-bor-green-dark transition-all duration-300 text-center">
-                    {t('contact_us_button')}
-                  </Link>
                   <span className="text-xs text-center text-gray-500">
                     {t('secure_payment')}
                   </span>

@@ -2,42 +2,82 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+interface Project {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  link: string;
+}
+
+const projects: Project[] = [
+  {
+    id: "boron",
+    title: "BORON ile Çevreci Tarım",
+    image: "/images/boron/1.jpg",
+    description: "Doğal toprak iyileştirici ürünümüz BORON ile sürdürülebilir tarım uygulamaları.",
+    link: "/projects/boron"
+  }
+];
 
 const Projects = () => {
   const { t } = useLanguage();
-  
+
   return (
-    <div className="min-h-screen flex flex-col bg-bor-beige overflow-hidden">
-      {/* Full-screen background image */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center z-0"
-        style={{ 
-          backgroundImage: `url(/uploads/66518c75-45ee-4b03-83b4-c491fa6e755c.png)`,
-          filter: 'blur(3px) brightness(0.7)'
-        }}
-      />
-      
+    <div className="min-h-screen flex flex-col bg-bor-beige">
       <Navbar />
 
-      <main className="flex-grow flex items-center justify-center relative z-10">
-        <div className="text-center space-y-8 bg-white/30 backdrop-blur-md p-10 rounded-xl shadow-xl max-w-2xl mx-4">
-          <img 
-            src="/uploads/66518c75-45ee-4b03-83b4-c491fa6e755c.png"
-            alt="Yenişehir Bor Vakfı Logo"
-            className="w-40 h-40 mx-auto object-contain drop-shadow-lg"
-          />
-          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-md">
-            {t('projects')}
-          </h2>
-          <p className="text-xl text-white/90 leading-relaxed font-medium drop-shadow-sm">
-            Projelerimiz çok yakında sizlerle buluşacak. Yenilikçi ve sürdürülebilir projelerimizi takipte kalın.
-          </p>
-          <div className="pt-4">
-            <span className="inline-block px-6 py-3 bg-bor-gold2/80 text-white font-medium rounded-lg backdrop-blur-sm shadow-lg">
-              Çok Yakında Sizlerle...
-            </span>
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-b from-bor-green/10 to-transparent">
+          <div className="container-custom text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-bor-green-dark mb-6">
+              {t('our_projects')}
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              {t('projects_description')}
+            </p>
           </div>
-        </div>
+        </section>
+
+        {/* Projects Grid Section */}
+        <section className="py-16 bg-bor-beige/50">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+              {projects.map((project) => (
+                <Link
+                  key={project.id}
+                  to={project.link}
+                  className="group bg-white rounded-lg shadow-lg overflow-hidden border border-bor-green/10 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative h-64">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-bor-green mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center text-bor-green font-medium">
+                      {t("learn_more")}
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

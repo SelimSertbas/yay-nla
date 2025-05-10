@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, useEffect, ReactNode } from "react";
 import { LanguageType } from "../components/Navbar";
 
@@ -64,6 +63,16 @@ const translations: Record<LanguageType, Record<string, string>> = {
     // Projects Page
     our_projects: "Projelerimiz",
     projects_description: "Yenişehir Bor Vakfı olarak, doğal yaşamı koruma ve toplumsal kalkınmaya katkı sağlamak için çeşitli projeler yürütüyoruz.",
+    project_grid_title: "Projelerimiz",
+    project_grid_description: "Doğa ve toplum için geliştirdiğimiz projelerimizi keşfedin.",
+    project_details: "Proje Detayları",
+    project_benefits: "Proje Faydaları",
+    project_impact: "Proje Etkisi",
+    project_partners: "Proje Ortakları",
+    project_gallery: "Proje Galerisi",
+    project_documents: "Proje Dokümanları",
+    project_news: "Proje Haberleri",
+    project_contact: "Proje İletişim",
     boron_project: "BORON ile Çevreci Tarım",
     boron_description: "BORON, geliştirdiğimiz tamamen doğal bir toprak iyileştirici üründür. Kimyasal gübre ve ilaçlara gerek kalmadan toprağınızı zenginleştirerek, daha sağlıklı ve verimli ürünler yetiştirmenize olanak tanır.",
     chemical_free: "Kimyasal içermez, %100 doğaldır",
@@ -75,7 +84,7 @@ const translations: Record<LanguageType, Record<string, string>> = {
     water_resources: "Su Kaynakları Koruma",
     water_resources_description: "Su kaynaklarımızın temizliği ve sürdürülebilirliği için projeler geliştiriyor ve uyguluyoruz. Göl ve nehir temizleme çalışmaları, su tasarrufu eğitimleri düzenliyoruz.",
     wildlife: "Yaban Hayatı",
-    wildlife_description: "Nesli tükenmekte olan türlerin korunması ve yaban hayatının sürdürülebilirliği için çalışıyoruz. Yerel ekosistemlerin korunması için farkındalık projeleri yürütüyoruz.",
+    wildlife_description: "Yaban hayatını korumak ve desteklemek için doğal yaşam alanları oluşturuyor, türlerin devamlılığını sağlıyoruz. Özellikle nesli tükenme tehlikesi altındaki türler için koruma programları yürütüyoruz.",
     education_projects: "Eğitim Projelerimiz",
     student_scholarships: "Öğrenci Bursları",
     scholarship_description: "Her yıl 50'den fazla öğrenciye eğitim bursu sağlayarak, geleceğin liderlerini destekliyoruz. Burslarımız öğrencilerin eğitim masraflarını karşılamaya yardımcı oluyor.",
@@ -85,6 +94,14 @@ const translations: Record<LanguageType, Record<string, string>> = {
     environmental_education_description: "İlkokul ve ortaokul öğrencilerine yönelik çevre bilinci ve sürdürülebilirlik eğitimleri düzenliyoruz. Öğrencilere doğayı koruma bilinci aşılıyoruz.",
     last_years: "Son 3 Yılda",
     schools_students: "okul, 2500+ öğrenci",
+    community_projects: "Toplumsal Destek Projeleri",
+    community_projects_description: "İhtiyaç sahiplerine yönelik sağlık hizmetleri, gıda yardımı ve sosyal destek programları yürütüyoruz. Toplumsal dayanışmayı güçlendiriyoruz.",
+    learn_more: "Daha Fazla Bilgi",
+    join_our_projects: "Projelerimize Katılın",
+    join_projects_description: "Siz de projelerimize destek olarak doğaya ve topluma katkıda bulunabilirsiniz. Gönüllü olarak çalışabilir veya bağış yapabilirsiniz.",
+    education_scholarships: "Eğitim Bursları",
+    clean_water: "Temizlik ve koruma",
+    sustainable_farming: "Sürdürülebilir tarım",
     
     // Donate Page
     donate_title: "Bağış Yapın",
@@ -347,6 +364,14 @@ const translations: Record<LanguageType, Record<string, string>> = {
     environmental_education_description: "ننظم دورات توعية بيئية واستدامة لطلاب المدارس الابتدائية والثانوية. نغرس الوعي بحماية الطبيعة في الطلاب.",
     last_years: "خلال السنوات الثلاث الماضية",
     schools_students: "مدارس، أكثر من 2500 طالب",
+    community_projects: "المشاريع المجتمعية",
+    community_projects_description: "نقوم بتنفيذ مشاريع الخدمات الصحية والمساعدة والمبادرات المجتمعية لدعم الأفراد والمجتمعات. نحمي المجتمعات ونثقلها.",
+    learn_more: "أكثر المعلومات",
+    join_our_projects: "إنضم إلى مشاريعنا",
+    join_projects_description: "يمكنك المشاركة في مشاريعنا لدعم الطبيعة والمجتمع بإمكانية عمل أو تبرع.",
+    education_scholarships: "المنح التعليمية",
+    clean_water: "التنظيف والحماية",
+    sustainable_farming: "الزراعة المستدامة",
     
     // Donate Page
     donate_title: "تبرع",
